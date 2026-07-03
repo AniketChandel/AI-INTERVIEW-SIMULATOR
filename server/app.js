@@ -43,6 +43,9 @@ ${resptext}
 Analyze the resume and return ONLY this JSON:
 
 {
+  {
+  "name of candidate": "",
+  "phone number": "",
   "resumescore": 0,
   "skills": {
     "programmingLanguages": [],
@@ -52,28 +55,47 @@ Analyze the resume and return ONLY this JSON:
     "frameworks": [],
     "tools": []
   },
-  "question": {
-    "questionnumber": 1,
-    "question": "",
-    "difficulty": "medium",
-    "skill": "",
-    "interviewComplete": false
-  }
+  "questions": [
+    {
+      "questionnumber": 1,
+      "question": "",
+      "difficulty": "easy",
+      "skill": ""
+    },
+    {
+      "questionnumber": 2,
+      "question": "",
+      "difficulty": "medium",
+      "skill": ""
+    },
+    {
+      "questionnumber": 3,
+      "question": "",
+      "difficulty": "medium",
+      "skill": ""
+    },
+    {
+      "questionnumber": 4,
+      "question": "",
+      "difficulty": "hard",
+      "skill": ""
+    },
+    {
+      "questionnumber": 5,
+      "question": "",
+      "difficulty": "medium",
+      "skill": ""
+    }
+  ]
 }
-
-Requirements:
-- ATS score must be between 0 and 95.
-- Extract all technical skills into the correct categories.
-- Generate one medium interview question based on the candidate's skills and projects.
-- Do not provide the answer.
-- Return only valid JSON.
 `
 })
+
 const cleaned = question.text
   .replace(/```json/g, "")
   .replace(/```/g, "")
   .trim();
-
+console.log(cleaned)
 res.json(JSON.parse(cleaned));
 
     fs.unlinkSync(req.file.path);
@@ -86,6 +108,7 @@ res.json(JSON.parse(cleaned));
     });
   }
 });
+
 app.post("/checkanswer", async (req, res) => {
   try {
     const { question, answer } = req.body;
@@ -123,6 +146,62 @@ Return only plain text.
     res.status(500).json({
       feedback: "Something went wrong."
     });
+  }
+});
+app.post("/checktest", async (req, res) => {
+  try {
+
+    const { name, resumescore, answers } = req.body;
+
+    const response = await api.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: `
+You are an expert AI Interview Evaluator.
+
+Candidate Name:
+${name}
+
+Resume Score:
+${resumescore}
+
+Interview Answers:
+${JSON.stringify(answers)}
+
+Evaluate every answer.
+
+Return ONLY valid JSON.
+
+{
+  "name":"",
+  "resumescore":0,
+  "totalscore":0,
+  "overallfeedback":"",
+  "questions":[
+    {
+      "questionnumber":1,
+      "score":0,
+      "feedback":""
+    }
+  ]
+}
+`
+    });
+
+    const cleaned = response.text
+      .replace(/```json/g, "")
+      .replace(/```/g, "")
+      .trim();
+
+    res.json(JSON.parse(cleaned));
+
+  } catch (error) {
+
+    console.log(error);
+
+    res.status(500).json({
+      message: "Something went wrong."
+    });
+
   }
 });
 
