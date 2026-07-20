@@ -1,16 +1,135 @@
-# React + Vite
+# AI Interview Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered interview preparation platform that analyzes resumes, generates personalized interview questions, evaluates responses, and provides detailed performance feedback.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Resume upload and analysis
 
-## React Compiler
+AI-generated interview questions based on resume content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Voice-enabled interview experience
 
-## Expanding the ESLint configuration
+Real-time answer evaluation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Overall interview score
+
+Resume score analysis
+
+Performance feedback with strengths and improvement areas
+
+Responsive and modern user interface
+
+## Tech Stack
+
+### Frontend
+
+React
+
+Vite
+
+CSS
+
+JavaScript
+
+### Backend
+
+Node.js
+
+Express.js
+
+Multer
+
+PDF Parse
+
+Google Gemini API
+
+## Project Structure
+
+```text
+ai-interview-simulator/
+├── public/
+├── src/
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   ├── uploads/
+│   └── utils/
+├── package.json
+└── README.md
+```
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/AniketChandel/AI-INTERVIEW-SIMULATOR.git
+```
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+cd server
+npm install
+npm start
+```
+
+## Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+PORT=5000
+```
+
+## How It Works
+
+1. Upload your resume in PDF format.
+2. The AI extracts important information from the resume.
+3. Personalized interview questions are generated.
+4. Answer each question during the interview.
+5. The AI evaluates every response.
+6. Receive your interview score, resume score, and detailed feedback.
+
+## Screenshots
+
+Home Page
+
+Resume Upload
+
+AI Interview
+
+Results Dashboard
+
+## Future Improvements
+
+User authentication
+
+Interview history
+
+Multiple interview domains
+
+Difficulty level selection
+
+Company-specific interview questions
+
+Downloadable interview reports
+
+Video interview support
+
+## Author
+
+**Aniket Singh**
+
+GitHub: https://github.com/AniketChandel
