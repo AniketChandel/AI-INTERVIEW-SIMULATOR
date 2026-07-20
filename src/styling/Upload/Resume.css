@@ -1,0 +1,100 @@
+
+#resume-box1{
+    text-align: center;
+    background-color:#0748d3;
+    margin-top: 0px;
+    font-size: 25px;
+  padding: 5px;
+
+}
+
+body {
+    min-height: 100vh;
+}
+#resume-title{
+    font-size: 2em;
+color: white;
+font-family:'Poppins',sans-serif;
+
+}
+#box21{
+    display: block;
+    margin-left: 9em;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 50px;
+
+}
+
+img{
+    height: 70px;
+    width: 65px;
+    margin-left:25px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 5em;
+  margin-left: 23em;
+   cursor: pointer;
+   
+}
+#line-box1{
+    margin-top: 60px;
+    font-size: 2.6em ;
+    font-weight: 600px;
+    text-align: center;
+    height:2.5em;
+  
+    color: #FFFFFF;
+}
+#upload{
+background-color: #42990f;
+display: inline-block;
+margin-left: 10.5em ;
+
+font-size: 18px;
+border-radius: 30px;
+align-items: center;
+width:5em;
+
+padding-top: 10px;
+padding-bottom: 10px;
+color: antiquewhite;
+ cursor: pointer;
+font-size: 30px;
+overflow: hidden;
+margin-top: 1em;
+text-align: center;
+
+}
+#upload:hover{
+    background-color: #1fcf0b;
+    transform: scale(1.05);
+}
+#box-2{
+    background-color: #0e5e3a;
+color: antiquewhite;
+
+    width: 50em;
+    height: 30em;
+    margin: 80px auto;
+    border: 2px dashed #0e5e3a;
+    margin-left: 22em;
+    box-shadow: 5px 5px 30px rgb(78, 156, 156);
+    border-radius: 30px;
+    
+      
+}
+img{
+    margin-top: 80px;
+    margin-left:22em;
+    height:100px;
+    width: 100px;
+    margin-bottom: 80px;
+
+}
+#box21{
+    margin-top: 70px;
+    font-size: 32px;
+    margin-left: 7em;
+    font-weight: 700;
+}

@@ -1,0 +1,111 @@
+.result-page {
+    min-height: 100vh;
+    background: #F8FAFC;
+    padding: 40px 0 60px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #6b31f1;
+    background-color: #feff0c;
+    margin-bottom: 40px;
+}
+
+.details {
+    width: 82%;
+    margin: auto;
+    background: #E0F2FE;
+    border-radius: 20px;
+   font-size: 20px;
+   margin-bottom: 100px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.details h2 {
+    color: #1E293B;
+}
+
+.scorebox {
+    width: 420px;
+    margin: 40px auto;
+    background: rgb(230 40 161);
+    color: white;
+    border-radius: 24px;
+    margin-top: 100px;
+    padding: 25px;
+    text-align: center;
+    font-size: 25px;
+   
+}
+
+.scorebox h1 {
+    font-size: 3.2rem;
+    margin-top: 15px;
+}
+
+.overall {
+    width: 82%;
+    margin: auto;
+    background: #FEF3C7;
+    border-radius: 20px;
+    padding: 30px 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.overall h2 {
+    color: #92400E;
+    margin-bottom: 15px;
+}
+
+.overall p {
+    color: #374151;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.questions {
+    width: 82%;
+    margin: 40px auto;
+}
+
+.questionbox {
+    background: white;
+    border-left: 6px solid #F97316;
+    border-radius: 18px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.questionbox h3 {
+    color: #F32078;
+    margin-bottom: 15px;
+}
+
+.questionbox p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+.submit {
+    display: block;
+    margin: 50px auto 0;
+    background: #0e58c8;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 16px 40px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 4em;
+}
+
+.submit:hover {
+ background-color: #1168ec;  
+    transform: translateY(-3px);
+}

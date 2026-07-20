@@ -1,0 +1,44 @@
+#faq-title{
+margin-top:80px;
+margin-left:50px;
+font-size:3.5em;
+color:#f32078;
+}
+
+.faq-box{
+margin-left:50px;
+
+}
+
+.q1{
+  background-color:  #F97316;
+    height:30px;
+    border-radius: 30px;
+      border: 2px solid  #F97316;
+  color: #ffffff;
+    margin-top:50px;
+     font-size:1.8em;
+     font-family:'Poppins',sans-serif;
+       padding: 30px;
+       width:45em;
+       display: inline-block;
+    }
+.a1{
+  font-size:1.2em;
+  margin-top:30px;
+background: #c9ddeb;
+color: #1E293B;
+    border: 2px solid black;
+    height:80px;
+    
+      width:68em;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+#btn
+{
+    display: inline-block;
+    margin-left: 20px;
+    
+}
