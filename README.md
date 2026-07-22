@@ -44,23 +44,6 @@ PDF Parse
 
 Google Gemini API
 
-## Project Structure
-
-```text
-ai-interview-simulator/
-├── public/
-├── src/
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── routes/
-│   ├── services/
-│   ├── uploads/
-│   └── utils/
-├── package.json
-└── README.md
-```
-
 ## Installation
 
 ### Clone the repository
