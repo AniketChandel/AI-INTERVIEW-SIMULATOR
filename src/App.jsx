@@ -9,7 +9,7 @@ function App() {
     <>
       <ToastContainer />
       <BrowserRouter>
-        <AppRoutes />
+        <AppRoutes/>
       </BrowserRouter>
     </>
   );
